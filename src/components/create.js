@@ -25,7 +25,7 @@ export default function Create() {
     // When a post request is sent to the create url, we'll add a new record to the database.
     const newPerson = { ...form };
 
-    await fetch("http://localhost:3000/contacts", {
+    await fetch("https://contact-app.onrender.com/contacts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

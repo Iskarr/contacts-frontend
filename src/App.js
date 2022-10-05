@@ -14,7 +14,7 @@ const App = () => {
     <div>
       <Navbar />
       <Routes>
-        <Route exact path="/contacts" element={<RecordList />} />
+        <Route exact path="/" element={<RecordList />} />
         <Route path="/edit/:id" element={<Edit />} />
         <Route path="/contacts/create" element={<Create />} />
       </Routes>

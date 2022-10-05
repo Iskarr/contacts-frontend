@@ -31,10 +31,8 @@ export default function RecordList() {
   // This method fetches the records from the database.
   useEffect(() => {
     async function getRecords() {
-      const response = await fetch(
-        `https://contact-app.onrender.com/contacts/`
-      );
-
+      const response = await fetch(`https://contact-app.onrender.com/contacts`);
+      console.log(response);
       if (!response.ok) {
         const message = `An error occurred: ${response.statusText}`;
         window.alert(message);

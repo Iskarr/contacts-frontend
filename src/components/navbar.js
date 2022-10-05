@@ -1,12 +1,13 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { NavLink } from "react-router-dom";
+import "./styles.css";
 
 export default function Navbar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <NavLink className="navbar-brand" to="/contacts">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <NavLink className="navbar-brand" to="/">
           <img
             style={{ width: 25 + "%", marginLeft: "10px" }}
             alt="MongoDB icon"

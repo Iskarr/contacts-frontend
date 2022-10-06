@@ -9,6 +9,9 @@ const Record = (props) => (
     <td>{props.record.email}</td>
     <td>{props.record.favoriteColor}</td>
     <td>{props.record.birthday}</td>
+    <td>{props.record.favoriteSport}</td>
+    <td>{props.record.musicGenre}</td>
+    <td>{props.record.currentCollege}</td>
     <td>
       <Link className="btn btn-link" to={`/edit/${props.record._id}`}>
         Edit
@@ -84,6 +87,9 @@ export default function RecordList() {
             <th>Email</th>
             <th>Favorite Color</th>
             <th>Birthday</th>
+            <th>Favorite Sport</th>
+            <th>Music Genre</th>
+            <th>Current College</th>
           </tr>
         </thead>
         <tbody>{recordList()}</tbody>

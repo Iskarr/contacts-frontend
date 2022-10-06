@@ -8,6 +8,9 @@ export default function Edit() {
     email: "",
     favoriteColor: "",
     birthday: "",
+    favoriteSport: "",
+    musicGenre: "",
+    currentCollege: "",
     records: [],
   });
   const params = useParams();
@@ -116,7 +119,6 @@ export default function Edit() {
             onChange={(e) => updateForm({ favoriteColor: e.target.value })}
           />
         </div>
-
         <div className="form-group">
           <label htmlFor="birthday">Birthday: </label>
           <input
@@ -127,6 +129,40 @@ export default function Edit() {
             onChange={(e) => updateForm({ birthday: e.target.value })}
           />
         </div>
+
+        <div className="form-group">
+          <label htmlFor="favoriteSport">Favorite Sport</label>
+          <input
+            type="text"
+            className="form-control"
+            id="favoriteSport"
+            value={form.favoriteSport}
+            onChange={(e) => updateForm({ favoriteSport: e.target.value })}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="musicGenre">Music Genre</label>
+          <input
+            type="text"
+            className="form-control"
+            id="musicGenre"
+            value={form.musicGenre}
+            onChange={(e) => updateForm({ musicGenre: e.target.value })}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="currentCollege">Current College</label>
+          <input
+            type="text"
+            className="form-control"
+            id="currentCollege"
+            value={form.currentCollege}
+            onChange={(e) => updateForm({ currentCollege: e.target.value })}
+          />
+        </div>
+
         <br />
         <div className="form-group">
           <input

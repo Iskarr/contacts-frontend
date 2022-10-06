@@ -61,6 +61,9 @@ export default function Edit() {
       email: form.email,
       favoriteColor: form.favoriteColor,
       birthday: form.birthday,
+      favoriteSport: form.favoriteSport,
+      musicGenre: form.musicGenre,
+      currentCollege: form.currentCollege,
     };
 
     // This will send a post request to update the data in the database.

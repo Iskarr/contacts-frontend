@@ -98,11 +98,7 @@ export default function RecordList() {
             <th>Current College</th>
           </tr>
         </thead>
-        {/* <tbody>{loading ? <Loader /> : recordList()}</tbody> */}
-        <tbody>
-          <Loader />
-          <p className="loader-text">Loading...</p>
-        </tbody>
+        <tbody>{loading ? <Loader /> : recordList()}</tbody>
       </table>
     </div>
   );

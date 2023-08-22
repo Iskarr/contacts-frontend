@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Loader from "./Loader";
 import "./styles.css";
 
 const Record = (props) => (
@@ -30,13 +31,16 @@ const Record = (props) => (
 );
 
 export default function RecordList() {
+  const [loading, setLoading] = useState(true);
   const [records, setRecords] = useState([]);
 
   // This method fetches the records from the database.
   useEffect(() => {
+    setLoading(true);
     async function getRecords() {
       const response = await fetch(`https://contact-app.onrender.com/contacts`);
       console.log(response);
+      setLoading(false);
       if (!response.ok) {
         const message = `An error occurred: ${response.statusText}`;
         window.alert(message);
@@ -44,6 +48,7 @@ export default function RecordList() {
       }
 
       const records = await response.json();
+
       setRecords(records);
     }
 
@@ -92,7 +97,7 @@ export default function RecordList() {
             <th>Current College</th>
           </tr>
         </thead>
-        <tbody>{recordList()}</tbody>
+        <tbody>{loading ? <Loader /> : recordList()}</tbody>
       </table>
     </div>
   );

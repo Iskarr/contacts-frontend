@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Loader from "./Loader";
 import "./styles.css";
+import "./loader.scss";
 
 const Record = (props) => (
   <tr>
@@ -97,7 +98,11 @@ export default function RecordList() {
             <th>Current College</th>
           </tr>
         </thead>
-        <tbody>{loading ? <Loader /> : recordList()}</tbody>
+        {/* <tbody>{loading ? <Loader /> : recordList()}</tbody> */}
+        <tbody>
+          <Loader />
+          <p className="loader-text">Loading...</p>
+        </tbody>
       </table>
     </div>
   );
